@@ -8,6 +8,9 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const db = require('./config/db');
+// db();
+
 const port = process.env.PORT || 3000;
 app.listen(port, (err) => {
     if (err) {
@@ -15,4 +18,3 @@ app.listen(port, (err) => {
     }
     console.log(`Server is running on port ${port}`);
 });
-
